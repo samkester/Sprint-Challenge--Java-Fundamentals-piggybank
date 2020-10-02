@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "coins")
-public class CoinModel {
+public class Coin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long coinid;
@@ -13,14 +13,14 @@ public class CoinModel {
     private double value;
     private int quantity;
 
-    public CoinModel(String name, String nameplural, double value, int quantity) {
+    public Coin(String name, String nameplural, double value, int quantity) {
         this.name = name;
         this.nameplural = nameplural;
         this.value = value;
         this.quantity = quantity;
     }
 
-    public CoinModel() {
+    public Coin() {
     }
 
     public long getCoinid() {
